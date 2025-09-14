@@ -102,6 +102,22 @@ POST /api/governance/compliance-report
   "scope": "enterprise",
   "frameworks": ["EU_AI_Act", "NIST_AI_RMF", "ISO_42001"]
 }
+
+# 🆕 CRO Liability Protection Analysis
+POST /api/governance/liability-analysis
+{
+  "governance_assessment": {...},
+  "system_context": {...},
+  "decision_maker": "Chief Risk Officer",
+  "proposed_action": "Continue AI system operation"
+}
+
+# 🆕 Executive Decision Package
+POST /api/governance/executive-decision
+{
+  "system_name": "Credit Scoring AI",
+  "decision_maker": "Chief Risk Officer"
+}
 ```
 
 ### Knowledge and Monitoring
@@ -152,6 +168,12 @@ GET /api/admin/governance-metrics
 - **Evidence Collection**: Technical, process, and regulatory evidence
 - **Audit Trail Generation**: Immutable governance event logging
 - **Compliance Reports**: Multi-framework compliance documentation
+
+### 🆕 5. Liability Protection Agent (`liability_protection_agent.py`)
+- **Regulatory Consequence Prediction**: Converts technical risks into specific financial penalties (€10M-€35M EU AI Act fines)
+- **Defensible Decision Documentation**: Court and regulator-defensible evidence packages with legal rationale
+- **Personal Liability Assessment**: Criminal liability risk analysis and D&O insurance coverage verification
+- **Executive Decision Packages**: Board-ready recommendations with defensibility scores and financial impact analysis
 
 ## 📚 Regulatory Knowledge Base
 

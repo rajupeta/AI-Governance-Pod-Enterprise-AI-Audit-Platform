@@ -30,6 +30,7 @@ graph TB
         D[Risk Assessment Agent] --> E[Policy Compliance Agent]
         E --> F[Bias Detection Agent]
         F --> G[Audit Documentation Agent]
+        G --> H2[Liability Protection Agent]
     end
     
     subgraph "Governance Knowledge Systems"
@@ -55,6 +56,7 @@ graph TB
     E --> L
     F --> P
     G --> S
+    H2 --> L
     
     style A fill:#f8f9fa
     style D fill:#e3f2fd
@@ -73,6 +75,8 @@ graph TB
 | **Regulatory Compliance** | "I receive automated compliance reports for EU AI Act, NIST frameworks, and internal policies" | Policy compliance agent with regulatory knowledge RAG |
 | **Risk Monitoring** | "I get real-time alerts when AI systems drift from approved parameters or violate policies" | Continuous monitoring with automated risk detection |
 | **Audit Documentation** | "I can generate audit-ready documentation for all AI systems and governance decisions" | Audit agent with automated report generation + evidence collection |
+| **🆕 Liability Protection** | "I get defensible decision documentation that protects me personally from regulatory and legal liability" | Liability protection agent with regulatory consequence prediction and court-defensible evidence |
+| **🆕 Executive Decision Support** | "I receive clear financial impact analysis and board-ready recommendations for high-risk AI decisions" | Executive decision package with penalty exposure, defensibility scores, and C-suite recommendations |
 
 ### As a Data Science Team Lead
 | User Story | Acceptance Criteria | Technical Implementation |
@@ -106,7 +110,8 @@ graph TB
 │   ├── risk_agent.py              # AI risk assessment and scoring
 │   ├── policy_agent.py            # Policy compliance checking
 │   ├── bias_agent.py              # Bias detection and analysis
-│   └── audit_agent.py             # Audit documentation generation
+│   ├── audit_agent.py             # Audit documentation generation
+│   └── liability_protection_agent.py  # 🆕 CRO liability protection and defensible decisions
 └── database/
     ├── governance_data.db         # Pre-populated SQLite database
     ├── schema.sql                 # Database structure
@@ -198,6 +203,14 @@ class AuditDocumentationAgent:
     - Evidence collection and organization
     - Compliance certification support
     - Risk communication and stakeholder reporting
+
+class LiabilityProtectionAgent:
+    """Protects CROs from personal liability in AI governance decisions"""
+    - Regulatory consequence prediction with specific financial penalties
+    - Defensible decision documentation for court/regulatory proceedings
+    - Personal liability assessment including criminal risk analysis
+    - Executive decision packages with board-ready recommendations
+    - Insurance coverage verification and gap analysis
 ```
 
 ---
